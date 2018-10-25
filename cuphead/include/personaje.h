@@ -9,24 +9,26 @@ class personaje {
     Sprite *sprite;
     Texture *textura;
     personaje();
-    void movercup();
     void saltar();
+    void stop();
     void saltarup();
     void saltardown();
+    void runleft();
+    void runright();
+
+    void movercup();
 
     int joyx,joyy,x_1=0;
     int x=420,y=470;
     float tam_personaje_bg= 0.78;
-    int saltar_n=0;
+    int saltar_n=17;
 
     //cargar archivos
     int n=49,n2=48;
     char imagen_n=n;
     char imagen_n2=n2;
-    string direcion ="imagenes/menu/run/cuphead_run_00";
+    string direcion ="imagenes/menu/run/00";
     string png =".png";
     string archivo =direcion+imagen_n2+imagen_n+ png;
-
-
 
 };
