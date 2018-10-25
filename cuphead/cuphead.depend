@@ -1,0 +1,63 @@
+# depslib dependency file v1.0
+1540331340 source:/home/jean/Documents/juego/bomberman/cuphead/main.cpp
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+	<iostream>
+	"control_center.h"
+
+1540337043 /home/jean/Documents/juego/bomberman/cuphead/include/control_center.h
+	<iostream>
+	<SFML/Graphics.hpp>
+	"menu.h"
+	"personaje.h"
+
+1540331341 /home/jean/Documents/juego/bomberman/cuphead/include/menu.h
+	<iostream>
+	<SFML/Graphics.hpp>
+	"string"
+
+1540378680 /home/jean/Documents/juego/bomberman/cuphead/include/personaje.h
+	<iostream>
+	<SFML/Graphics.hpp>
+	"string"
+
+1540378680 source:/home/jean/Documents/juego/bomberman/cuphead/src/control_center.cpp
+	"control_center.h"
+
+1540331341 source:/home/jean/Documents/juego/bomberman/cuphead/src/menu.cpp
+	"menu.h"
+
+1540387002 source:/home/jean/Documents/juego/bomberman/cuphead/src/personaje.cpp
+	"personaje.h"
+
+1540331340 source:/home/jean/Documents/juego/j/cuphead/main.cpp
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+	<iostream>
+	"control_center.h"
+
+1540337043 /home/jean/Documents/juego/j/cuphead/include/control_center.h
+	<iostream>
+	<SFML/Graphics.hpp>
+	"menu.h"
+	"personaje.h"
+
+1540331341 /home/jean/Documents/juego/j/cuphead/include/menu.h
+	<iostream>
+	<SFML/Graphics.hpp>
+	"string"
+
+1540378680 /home/jean/Documents/juego/j/cuphead/include/personaje.h
+	<iostream>
+	<SFML/Graphics.hpp>
+	"string"
+
+1540378680 source:/home/jean/Documents/juego/j/cuphead/src/control_center.cpp
+	"control_center.h"
+
+1540331341 source:/home/jean/Documents/juego/j/cuphead/src/menu.cpp
+	"menu.h"
+
+1540387002 source:/home/jean/Documents/juego/j/cuphead/src/personaje.cpp
+	"personaje.h"
+
