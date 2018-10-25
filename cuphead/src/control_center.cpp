@@ -15,7 +15,7 @@ void juego::gameloop(){
       while ( ventana1 -> pollEvent( event ) ){
 
         if(inicio_menu){
-        if (sf::Joystick::isButtonPressed(0, 9) or bg_cuphead.x >= 1000){
+        if (sf::Joystick::isButtonPressed(0, 9) or bg.x >= 980){
 
               std::cout << "play" << '\n';
               inicio_menu=false;
@@ -29,8 +29,8 @@ void juego::gameloop(){
 
     if(inicio_menu){
       ventana1 -> draw(background_1);
-      ventana1 -> draw(bg_cuphead.sprite[bg_cuphead.x_1]);
-      bg_cuphead.movercup();
+      ventana1 -> draw(bg.sprite[bg.x_1]);
+      bg.movercup();
     }
 
     if(inicio_mapa){

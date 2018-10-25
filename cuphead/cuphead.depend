@@ -61,3 +61,34 @@
 1540387002 source:/home/jean/Documents/juego/j/cuphead/src/personaje.cpp
 	"personaje.h"
 
+1540331340 source:/home/jean/Documents/juegos/cuphead/cuphead/main.cpp
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+	<iostream>
+	"control_center.h"
+
+1540439935 /home/jean/Documents/juegos/cuphead/cuphead/include/control_center.h
+	<iostream>
+	<SFML/Graphics.hpp>
+	"menu.h"
+	"personaje.h"
+
+1540439935 /home/jean/Documents/juegos/cuphead/cuphead/include/menu.h
+	<iostream>
+	<SFML/Graphics.hpp>
+	"string"
+
+1540378680 /home/jean/Documents/juegos/cuphead/cuphead/include/personaje.h
+	<iostream>
+	<SFML/Graphics.hpp>
+	"string"
+
+1540378680 source:/home/jean/Documents/juegos/cuphead/cuphead/src/control_center.cpp
+	"control_center.h"
+
+1540439935 source:/home/jean/Documents/juegos/cuphead/cuphead/src/menu.cpp
+	"menu.h"
+
+1540387002 source:/home/jean/Documents/juegos/cuphead/cuphead/src/personaje.cpp
+	"personaje.h"
+

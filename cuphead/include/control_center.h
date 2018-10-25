@@ -24,7 +24,7 @@ class juego{
 
     //menu del juego
     background  background_1;
-    movimiento bg_cuphead;
+    personaje bg;
 
     //play game
     personaje p1;
