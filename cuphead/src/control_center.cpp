@@ -39,6 +39,10 @@ void juego::gameloop(){
       ventana1 -> draw(p1.sprite[p1.x_1]);
       p1.movercup();
       p1.saltar();
+      ventana1 -> draw(e1.sprite[e1.x_1]);
+      e1.moverenemy();
+
+
 
     }
 

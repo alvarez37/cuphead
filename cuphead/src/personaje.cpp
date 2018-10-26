@@ -90,8 +90,4 @@ void personaje::movercup(){
       runleft();
     }
 
-
-
-//  stop();
-
 }
