@@ -1,5 +1,4 @@
 #include <SFML/Graphics.hpp>
-#include <SFML/Audio.hpp>
 
 #include <iostream>
 #include "control_center.h"
@@ -19,4 +18,3 @@ int main(){
 
     return 0;
 }
-

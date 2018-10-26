@@ -24,6 +24,8 @@ class juego{
 
     //menu del juego
     background  background_1;
+    background2  background_2;
+
     personaje bg;
 
     //play game
