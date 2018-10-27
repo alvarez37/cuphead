@@ -4,7 +4,7 @@ using namespace std;
 using namespace sf;
 #include "menu.h"
 #include "personaje.h"
-#include "enemy_1.h"
+#include "enemy.h"
 
 
 using namespace sf;
