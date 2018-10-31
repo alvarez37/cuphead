@@ -7,6 +7,8 @@ juego::juego( int x, int y, std::string titulo){
 
     gameloop();
 
+
+
 }
 
 void juego::gameloop(){
@@ -29,6 +31,8 @@ void juego::gameloop(){
 
     if(inicio_menu){
       ventana1 -> draw(background_1);
+      ventana1 -> draw(fuente1.cadena_texto);
+
       ventana1 -> draw(bg.sprite[bg.x_1]);
       bg.movercup();
 

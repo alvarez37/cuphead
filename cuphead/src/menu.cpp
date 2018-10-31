@@ -1,5 +1,22 @@
 #include "menu.h"
 
+texto::texto(){
+
+
+fuente.loadFromFile("fuente_para_score/fuente.ttf");
+
+cadena_texto.setString(entrada);
+// Asignamos la fuente que hemos cargado al texto
+cadena_texto.setFont(fuente);
+// Tamaño de la fuente
+cadena_texto.setCharacterSize(50);
+// Posición del texto
+cadena_texto.setPosition(450, 0);
+
+}
+
+
+
 background::background()  : sf::Sprite(){
 
 
