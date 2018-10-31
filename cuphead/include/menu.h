@@ -6,6 +6,21 @@ using namespace std;
 using namespace sf;
 #include "string"
 
+class texto{
+
+public:
+    texto();
+    Font fuente;
+    Text cadena_texto;
+    string entrada= "welcome to my game ->";
+
+
+};
+
+
+
+
+
 class background : public sf::Sprite {
 
     public:

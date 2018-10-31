@@ -33,6 +33,8 @@ class juego{
     enemy e1;
     personaje p1;
 
+    texto fuente1;
+
 
     Event event;
 
