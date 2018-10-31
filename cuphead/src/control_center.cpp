@@ -37,6 +37,9 @@ void juego::gameloop(){
     if(inicio_mapa){
       ventana1 -> draw(background_2);
       ventana1 -> draw(p1.sprite[p1.x_1]);
+      ventana1 -> draw(p1.bala1);
+
+
       p1.movercup();
       p1.saltar();
       p1.agacharse();

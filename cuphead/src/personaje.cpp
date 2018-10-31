@@ -29,11 +29,25 @@ personaje::personaje(){
 // *****************************************************************************
 void personaje::runright(){
     (x<990) ? x += 30 : x=990;
+    if(x_1<7){
+      x_1=7;
+    }
+    if(x_1>21){
+      x_1=7;
+    }
+    x_1++;
 }
 
 // *****************************************************************************
 void personaje::runleft(){
      (x>0 ) ? x -= 30 : x=0;
+     if(x_1<47){
+       x_1=47;
+     }
+     if(x_1>59){
+       x_1=47;
+     }
+     x_1++;
 }
 
 // *****************************************************************************
@@ -116,6 +130,13 @@ void personaje::disparar(){
   }
   x_1++;
 
+  bala_x=x;
+  bala_y=y;
+  bala1.setPosition(Vector2f(bala_x ,bala_y));
+  if(num_bala>=2){
+    num_bala=0;
+  }
+
 }
 // *****************************************************************************
 void personaje::movercup(){
@@ -141,9 +162,25 @@ void personaje::movercup(){
 
     if (joyx <  0 || sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
       runleft();
+      if(x_1<59){
+        x_1=45;
+      }
+      if(x_1>59){
+        x_1=45;
+      }
+      x_1++;
     }
+
     if ( sf::Joystick::isButtonPressed(0,5) || sf::Keyboard::isKeyPressed(sf::Keyboard::X)){
       disparar();
+    }
+    else{
+      std::cout << "balaaaaaaaa" << '\n';
+      bala_x+=90;
+      bala1.setPosition(Vector2f(bala_x ,bala_y));
+      if(bala_x>690){
+        bala_x=5000;
+      }
     }
 
 }

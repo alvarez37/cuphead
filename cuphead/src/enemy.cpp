@@ -1,4 +1,4 @@
-#include "enemy.h"
+#include "enemy_1.h"
 
 enemy::enemy(){
 
@@ -44,4 +44,3 @@ void enemy::moverenemy(){
 
 
 }
-
