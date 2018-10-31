@@ -3,6 +3,7 @@ using namespace std;
 #include <SFML/Graphics.hpp>
 using namespace sf;
 #include "string"
+#include "bala.h"
 
 class personaje {
   public:
@@ -19,8 +20,11 @@ class personaje {
     void movercup();
     void disparar();
 
+    bala bala1;
+    int num_bala=0;
+    int bala_x=-100,bala_y=0;
 
-    int cantidad_imagenes=45;
+    int cantidad_imagenes=61;
     int joyx,joyy;
     int x_1=0;
     int x=420,y=470;

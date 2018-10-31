@@ -33,6 +33,7 @@ class juego{
     enemy e1;
     personaje p1;
 
+
     Event event;
 
     int fps=12;
