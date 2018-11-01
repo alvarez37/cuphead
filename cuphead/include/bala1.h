@@ -10,7 +10,6 @@ class bala: public sf::Sprite {
 
     public:
 
-
       bala();
 
     private:

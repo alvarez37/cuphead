@@ -7,8 +7,6 @@ juego::juego( int x, int y, std::string titulo){
 
     gameloop();
 
-
-
 }
 
 void juego::gameloop(){
@@ -30,6 +28,8 @@ void juego::gameloop(){
     ventana1 -> clear();
 
     if(inicio_menu){
+
+
       ventana1 -> draw(background_1);
       ventana1 -> draw(fuente1.cadena_texto);
 
@@ -39,6 +39,8 @@ void juego::gameloop(){
     }
 
     if(inicio_mapa){
+      p1.npersonaje=0;
+
       ventana1 -> draw(background_2);
       ventana1 -> draw(p1.sprite[p1.x_1]);
       ventana1 -> draw(p1.bala1);
@@ -47,6 +49,8 @@ void juego::gameloop(){
       p1.movercup();
       p1.saltar();
       p1.agacharse();
+
+
       ventana1 -> draw(e1.sprite[e1.x_1]);
       e1.moverenemy();
 

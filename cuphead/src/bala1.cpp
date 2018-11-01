@@ -1,4 +1,4 @@
-#include "bala.h"
+#include "bala1.h"
 
 bala::bala()  : sf::Sprite(){
 

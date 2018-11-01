@@ -29,6 +29,7 @@ personaje::personaje(){
 // *****************************************************************************
 void personaje::runright(){
     (x<990) ? x += 30 : x=990;
+
     if(x_1<7){
       x_1=7;
     }
@@ -36,6 +37,7 @@ void personaje::runright(){
       x_1=7;
     }
     x_1++;
+
 }
 
 // *****************************************************************************
@@ -151,24 +153,12 @@ void personaje::movercup(){
 
     if (joyx  > 0 || sf::Keyboard::isKeyPressed(sf::Keyboard::Right) ){
       runright();
-      if(x_1<6){
-        x_1=7;
-      }
-      if(x_1>22){
-        x_1=8;
-      }
-      x_1++;
+  
     }
 
     if (joyx <  0 || sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
       runleft();
-      if(x_1<59){
-        x_1=45;
-      }
-      if(x_1>59){
-        x_1=45;
-      }
-      x_1++;
+
     }
 
     if ( sf::Joystick::isButtonPressed(0,5) || sf::Keyboard::isKeyPressed(sf::Keyboard::X)){
