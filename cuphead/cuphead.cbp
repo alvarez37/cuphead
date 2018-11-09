@@ -42,11 +42,15 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="cb.bmp" />
+		<Unit filename="include/balaz.h" />
 		<Unit filename="include/control_center.h" />
+		<Unit filename="include/enemy_1.h" />
 		<Unit filename="include/menu.h" />
 		<Unit filename="include/personaje.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/balaz.cpp" />
 		<Unit filename="src/control_center.cpp" />
+		<Unit filename="src/enemy_1.cpp" />
 		<Unit filename="src/menu.cpp" />
 		<Unit filename="src/personaje.cpp" />
 		<Extensions>

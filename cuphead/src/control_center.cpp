@@ -9,7 +9,7 @@ juego::juego( int x, int y, std::string titulo){
 
 }
 
-void juego::gameloop(){
+void juego::gameloop(  ) {
     while(ventana1 -> isOpen()){
 
       while ( ventana1 -> pollEvent( event ) ){
@@ -39,16 +39,29 @@ void juego::gameloop(){
     }
 
     if(inicio_mapa){
-      p1.npersonaje=0;
 
       ventana1 -> draw(background_2);
-      ventana1 -> draw(p1.sprite[p1.x_1]);
-      ventana1 -> draw(p1.bala1);
+      ventana1 -> draw(fuente2.cadena_texto);
+
+      // 
+      //
+      // ventana1 -> draw(p1.sprite[p1.x_1]);
+      // ventana1 -> draw(p1.bala1);
+      // p1.movercup();
+      // p1.saltar();
+      // p1.agacharse();
 
 
-      p1.movercup();
-      p1.saltar();
-      p1.agacharse();
+      ventana1 -> draw(p2.sprite[p2.x_1]);
+
+      for (int i = 0; i < 10; i++) {
+        ventana1 -> draw(p2.bala1[i]);
+      }
+      p2.movercup();
+      p2.saltar();
+      p2.agacharse();
+
+
 
 
       ventana1 -> draw(e1.sprite[e1.x_1]);

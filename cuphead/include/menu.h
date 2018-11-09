@@ -10,6 +10,8 @@ class texto{
 
 public:
     texto();
+    texto(int ,int,int,string);
+
     Font fuente;
     Text cadena_texto;
     string entrada= "welcome to my game ->";

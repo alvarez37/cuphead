@@ -15,12 +15,28 @@ cadena_texto.setPosition(450, 0);
 
 }
 
+texto::texto(int x,int y ,int tam, string a){
+
+
+fuente.loadFromFile("fuente_para_score/fuente.ttf");
+
+cadena_texto.setString(a);
+cadena_texto.setFont(fuente);
+cadena_texto.setCharacterSize(tam);
+cadena_texto.setPosition(x,y);
+cadena_texto.setColor(sf::Color(175, 108, 3));
+
+
+}
+
+
+
 
 
 background::background()  : sf::Sprite(){
 
 
-      buffer.loadFromFile("sound/beirut2007-10-03_t02.ogg");
+      buffer.loadFromFile("sound/MUS_VictoryScreen.wav");
     	sonido.setBuffer(buffer);
     	sonido.setVolume(80);
       sonido.play();

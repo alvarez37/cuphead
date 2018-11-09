@@ -1,0 +1,11 @@
+/home/jean/Documents/juego/cuphead/cuphead/src/menu.cpp:3:1: error: ‘texto’ does not name a type
+ texto::texto(){
+ ^~~~~
+/home/jean/Documents/juego/cuphead/cuphead/src/menu.cpp:20:1: error: ‘background’ does not name a type; did you mean ‘bkgrnd’?
+ background::background()  : sf::Sprite(){
+ ^~~~~~~~~~
+ bkgrnd
+/home/jean/Documents/juego/cuphead/cuphead/src/menu.cpp:42:1: error: ‘background2’ does not name a type; did you mean ‘bkgrnd’?
+ background2::background2()  : sf::Sprite(){
+ ^~~~~~~~~~~
+ bkgrnd

@@ -26,6 +26,35 @@ personaje::personaje(){
 }
 
 // *****************************************************************************
+personaje::personaje(int a){
+
+  npersonaje=a;
+  textura = new Texture[cantidad_imagenes];
+
+  for (int i = 0; i < cantidad_imagenes ; i++) {
+
+  archivo =direcion+imagen_n2+imagen_n+ png;
+  textura[i].loadFromFile(archivo);
+  n++;
+  imagen_n=n;
+  imagen_n2=n2;
+  if(56<n){
+    n=47;
+    n2++;
+  }
+  }
+
+  sprite = new Sprite[cantidad_imagenes];
+
+  for (int i = 0; i < cantidad_imagenes ; i++) {
+    sprite[i].setTexture(textura[i]);
+    sprite[i].setScale(sf::Vector2f(tam_personaje_bg, tam_personaje_bg));
+  }
+}
+
+
+
+// *****************************************************************************
 // *****************************************************************************
 void personaje::runright(){
     (x<990) ? x += 30 : x=990;
@@ -54,7 +83,7 @@ void personaje::runleft(){
 
 // *****************************************************************************
 void personaje::saltar(){
-  if ( (sf::Joystick::isButtonPressed(0, 0) || sf::Keyboard::isKeyPressed(sf::Keyboard::Up) ) && saltar_n==0 ){
+  if ( (sf::Joystick::isButtonPressed(npersonaje, 0) || sf::Keyboard::isKeyPressed(sf::Keyboard::Up) ) && saltar_n==0 ){
       saltar_n=10;
 
     }
@@ -84,14 +113,13 @@ void personaje::saltar(){
 
       }
 
-
     if(saltar_n < 0)
         saltar_n=0;
 
 }
 void personaje::agacharse(){
 
-    if ( (sf::Joystick::isButtonPressed(0, 2) || sf::Keyboard::isKeyPressed(sf::Keyboard::Down) ) && agacharse_n==0 ){
+    if ( (sf::Joystick::isButtonPressed(npersonaje, 2) || sf::Keyboard::isKeyPressed(sf::Keyboard::Down) ) && agacharse_n==0 ){
         agacharse_n=4;
         x_1=24;
         if(x_1>29 ){
@@ -112,8 +140,8 @@ void personaje::agacharse(){
 
 // **********************0*******************************************************
 void personaje::stop(){
-  if ( !(sf::Joystick::getAxisPosition(0, sf::Joystick::X)  ||
-  sf::Joystick::getAxisPosition(0, sf::Joystick::Y))  ) {
+  if ( !(sf::Joystick::getAxisPosition(npersonaje, sf::Joystick::X)  ||
+  sf::Joystick::getAxisPosition(npersonaje, sf::Joystick::Y))  ) {
     if(x_1>6 ){
       x_1=0;
     }
@@ -124,6 +152,9 @@ void personaje::stop(){
 }
 // **********************0*******************************************************
 void personaje::disparar(){
+  cont_bala++;
+  std::cout << cont_bala << '\n';
+
   if(x_1<39){
     x_1=39;
   }
@@ -134,7 +165,10 @@ void personaje::disparar(){
 
   bala_x=x;
   bala_y=y;
-  bala1.setPosition(Vector2f(bala_x ,bala_y));
+
+
+
+  bala1[0].setPosition(Vector2f(bala_x ,bala_y));
   if(num_bala>=2){
     num_bala=0;
   }
@@ -143,34 +177,32 @@ void personaje::disparar(){
 // *****************************************************************************
 void personaje::movercup(){
 
-  std::cout << "x_1 : " << x_1 << '\n';
   for (int i = 0; i < cantidad_imagenes ; i++)
     sprite[i].setPosition(Vector2f(x ,y));
 
+    if ( sf::Joystick::isButtonPressed(npersonaje,5) || sf::Keyboard::isKeyPressed(sf::Keyboard::X)){
+      disparar();
+    }
+    else{
+      bala_x+=90;
+      bala1[0].setPosition(Vector2f(bala_x ,bala_y));
+      if(bala_x>690){
+        bala_x=5000;
+      }
+    }
+
     stop();
 
-    joyx = sf::Joystick::getAxisPosition(0, sf::Joystick::X);
+    std::cout << npersonaje << '\n';
+
+    joyx = sf::Joystick::getAxisPosition(npersonaje, sf::Joystick::X);
 
     if (joyx  > 0 || sf::Keyboard::isKeyPressed(sf::Keyboard::Right) ){
       runright();
-  
     }
 
     if (joyx <  0 || sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
       runleft();
-
-    }
-
-    if ( sf::Joystick::isButtonPressed(0,5) || sf::Keyboard::isKeyPressed(sf::Keyboard::X)){
-      disparar();
-    }
-    else{
-      std::cout << "balaaaaaaaa" << '\n';
-      bala_x+=90;
-      bala1.setPosition(Vector2f(bala_x ,bala_y));
-      if(bala_x>690){
-        bala_x=5000;
-      }
     }
 
 }

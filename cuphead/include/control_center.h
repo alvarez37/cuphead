@@ -4,7 +4,7 @@ using namespace std;
 using namespace sf;
 #include "menu.h"
 #include "personaje.h"
-#include "enemy1.h"
+#include "enemy_1.h"
 
 
 using namespace sf;
@@ -31,10 +31,13 @@ class juego{
 
     //play game
     enemy e1;
+    personaje p1= personaje(0);
+    personaje p2= personaje(1);
 
-    personaje p1;
+
 
     texto fuente1;
+    texto fuente2 = texto (5,5,40,"vidas  : 3 ");
 
 
     Event event;

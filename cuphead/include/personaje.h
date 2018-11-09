@@ -3,13 +3,14 @@ using namespace std;
 #include <SFML/Graphics.hpp>
 using namespace sf;
 #include "string"
-#include "bala1.h"
+#include "balaz.h"
 
 class personaje {
   public:
+
     Sprite *sprite;
     Texture *textura;
-    personaje(int xzk);
+    personaje(int );
     personaje();
     void saltar();
     void stop();
@@ -21,9 +22,11 @@ class personaje {
     void movercup();
     void disparar();
 
-    bala bala1;
+    bala bala1[10];
     int num_bala=0;
-    int bala_x=-100,bala_y=0;
+    int cont_bala=0;
+
+    int bala_x=-100,bala_y=-100;
 
     int npersonaje;
     int cantidad_imagenes=61;
@@ -35,6 +38,7 @@ class personaje {
     int saltar_n=0;
     int agacharse_n=0;
 
+  private:
     //cargar archivos
     int n=49,n2=48;
     char imagen_n=n;

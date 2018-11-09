@@ -137,39 +137,43 @@
 	<iostream>
 	"control_center.h"
 
-1541089783 /home/jean/Documents/juego/cuphead/cuphead/include/control_center.h
+1541684756 /home/jean/Documents/juego/cuphead/cuphead/include/control_center.h
 	<iostream>
 	<SFML/Graphics.hpp>
 	"menu.h"
 	"personaje.h"
-	"enemy1.h"
+	"enemy_1.h"
 
-1541079091 /home/jean/Documents/juego/cuphead/cuphead/include/menu.h
+1541605938 /home/jean/Documents/juego/cuphead/cuphead/include/menu.h
 	<iostream>
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
 	"string"
 
-1541087852 /home/jean/Documents/juego/cuphead/cuphead/include/personaje.h
+1541776416 /home/jean/Documents/juego/cuphead/cuphead/include/personaje.h
 	<iostream>
 	<SFML/Graphics.hpp>
 	"string"
-	"bala1.h"
+	"balaz.h"
 
-1541079766 /home/jean/Documents/juego/cuphead/cuphead/include/bala.h
+1541594505 /home/jean/Documents/juego/cuphead/cuphead/include/bala.h
+	<iostream>
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+	"string"
 
 1541079091 /home/jean/Documents/juego/cuphead/cuphead/include/enemy.h
 	<iostream>
 	<SFML/Graphics.hpp>
 	"string"
 
-1541087706 source:/home/jean/Documents/juego/cuphead/cuphead/src/control_center.cpp
+1541776484 source:/home/jean/Documents/juego/cuphead/cuphead/src/control_center.cpp
 	"control_center.h"
 
-1541079091 source:/home/jean/Documents/juego/cuphead/cuphead/src/menu.cpp
+1541606487 source:/home/jean/Documents/juego/cuphead/cuphead/src/menu.cpp
 	"menu.h"
 
-1541080355 source:/home/jean/Documents/juego/cuphead/cuphead/src/personaje.cpp
+1541777839 source:/home/jean/Documents/juego/cuphead/cuphead/src/personaje.cpp
 	"personaje.h"
 
 1541079621 /home/jean/Documents/juego/cuphead/cuphead/include/enemy1.h
@@ -188,4 +192,21 @@
 
 1541079791 source:/home/jean/Documents/juego/cuphead/cuphead/src/enemy1.cpp
 	"enemy1.h"
+
+1541608138 /home/jean/Documents/juego/cuphead/cuphead/include/enemy_1.h
+	<iostream>
+	<SFML/Graphics.hpp>
+	"string"
+
+1541777894 /home/jean/Documents/juego/cuphead/cuphead/include/balaz.h
+	<iostream>
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+	"string"
+
+1541684909 source:/home/jean/Documents/juego/cuphead/cuphead/src/enemy_1.cpp
+	"enemy_1.h"
+
+1541777848 source:/home/jean/Documents/juego/cuphead/cuphead/src/balaz.cpp
+	"balaz.h"
 
