@@ -2,21 +2,18 @@
 
 bala::bala()  : sf::Sprite(){
 
-
       bala_1 = new Texture;
-
 
       this ->setPosition(Vector2f(x ,y ));
       this ->setScale(sf::Vector2f(tam_bala, tam_bala));
 }
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 bala_cuphead::bala_cuphead()  : bala(){
-
       bala_1 -> loadFromFile("imagenes/bala.png");
       this ->setTexture(*bala_1);
-
 }
 
 void bala_cuphead::direcion(int a,int b) {
@@ -25,7 +22,6 @@ void bala_cuphead::direcion(int a,int b) {
 }
 
 void bala_cuphead::moverbala( ) {
-
     if (x>0) {
       this ->setPosition(Vector2f(x , y ));
       x+=90;
@@ -34,16 +30,14 @@ void bala_cuphead::moverbala( ) {
       x=0;
     }
 }
+
 //++++++++++++++++++++++++++++++++++++++++++++++++++++
-int bala_enemigo::get_xbala () {
-  return x;
-}
-int bala_enemigo::get_ybala() {
-  return y;
-}
+//++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+int bala_enemigo::get_xbala() {return x; }
+int bala_enemigo::get_ybala() {return y; }
 
 bala_enemigo::bala_enemigo()  : bala(){
-
       tam_bala=1.21;
       this ->setScale(sf::Vector2f(tam_bala, tam_bala));
       bala_1 -> loadFromFile("imagenes/enemy/Cagney Carnation/Creating Object/Acorn/Acorn_03.png");
@@ -51,11 +45,9 @@ bala_enemigo::bala_enemigo()  : bala(){
 }
 
 
-void bala_enemigo::direcion(int x_) {
-  x=x_;
-}
+void bala_enemigo::direcion(int x_) {x=x_;}
 
-void bala_enemigo::moverbala( ) {
+void bala_enemigo::moverbala() {
     if (x>0) {
       this ->setPosition(Vector2f( x , y ));
       y+=10;

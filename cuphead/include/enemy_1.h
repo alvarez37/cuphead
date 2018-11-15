@@ -5,7 +5,6 @@ using namespace sf;
 #include "string"
  #include "balaz.h"
 
-
 class enemy {
 
   public:

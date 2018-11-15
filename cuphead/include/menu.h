@@ -1,3 +1,7 @@
+#ifndef MENU_H
+#define MENU_H
+
+
 #include <iostream>
 using namespace std;
 #include <SFML/Graphics.hpp>
@@ -5,18 +9,21 @@ using namespace std;
 
 using namespace sf;
 #include "string"
+#include "sstream"
 
 class texto{
 
 public:
     texto();
-    void modificar_texto();
+    void modificar_texto(int);
     texto(int ,int,int,string);
+    texto(int ,int,int,int);
 
+    int contenerINT;
     Font fuente;
     Text cadena_texto;
     string entrada= "welcome to my game ->";
-    string b;
+    string titulo= "";
 
 };
 
@@ -25,7 +32,6 @@ public:
 class background : public sf::Sprite {
 
     public:
-
 
       background();
 
@@ -46,7 +52,6 @@ class background2 : public sf::Sprite {
 
     public:
 
-
       background2();
 
     private:
@@ -55,3 +60,6 @@ class background2 : public sf::Sprite {
       Texture * background_1;
 
 };
+
+
+#endif

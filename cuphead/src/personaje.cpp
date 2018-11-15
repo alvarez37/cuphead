@@ -23,6 +23,7 @@ personaje::personaje(){
     sprite[i].setTexture(textura[i]);
     sprite[i].setScale(sf::Vector2f(tam_personaje_bg, tam_personaje_bg));
   }
+
 }
 
 // *****************************************************************************
@@ -148,7 +149,6 @@ void personaje::stop(){
     x_1++;
   }
 
-
 }
 // **********************0*******************************************************
 void personaje::disparar(){
@@ -170,8 +170,8 @@ void personaje::disparar(){
     num_bala=0;
   }
 
-
 }
+// *****************************************************************************
 
 int personaje::get_ypersonaje(){
   return y;
@@ -179,6 +179,12 @@ int personaje::get_ypersonaje(){
 // *****************************************************************************
 int personaje::get_xpersonaje(){
   return x;
+}
+
+
+// *****************************************************************************
+int personaje::get_VidaPersonaje(){
+  return vidas;
 }
 // *****************************************************************************
 void personaje::movercup(){

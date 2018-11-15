@@ -17,12 +17,11 @@ class bala : public sf::Sprite{
 
       protected:
 
-        int x=0,y=0;
+        int x=-100,y=0;
         float tam_bala= 0.21;
         Texture * bala_1;
 
 };
-
 
 class bala_cuphead : public bala {
 

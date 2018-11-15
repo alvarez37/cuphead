@@ -19,10 +19,14 @@ class juego{
         void kaboom_yiyi();
 
     private:
-
     int n_vidas=0;
-    bool inicio_menu=true;
-    bool inicio_mapa=false;
+    // bool inicio_menu=true;
+    // bool inicio_mapa=false;
+
+// temporal
+    bool inicio_menu=false;
+    bool inicio_mapa=true;
+
 
     RenderWindow * ventana1;
 
@@ -37,11 +41,8 @@ class juego{
     personaje p1= personaje(0);
     personaje p2= personaje(1);
 
-
-
-    texto fuente1;
-    texto fuente2 = texto (5,5,40,"vidas  : 3 ");
-    texto fuente3 = texto (800,5,40,"10000 ");
+    texto welcome;
+    texto vidase_num = texto (800,5,40,"10000 ");
 
     Event event;
 

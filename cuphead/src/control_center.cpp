@@ -11,45 +11,38 @@ juego::juego( int x, int y, std::string titulo){
 
 void juego::gameloop(  ) {
     while(ventana1 -> isOpen()){
-
       while ( ventana1 -> pollEvent( event ) ){
 
         if(inicio_menu){
-        if (sf::Joystick::isButtonPressed(0, 9) or bg.x > 970){
+          if (sf::Joystick::isButtonPressed(0, 9) or bg.get_xpersonaje() > 970){
 
               std::cout << "play" << '\n';
               inicio_menu=false;
               inicio_mapa=true;
-           }
-         }
-
-       }
+            }
+        }
+    }
 
     ventana1 -> clear();
 
     if(inicio_menu){
-
-
       ventana1 -> draw(background_1);
-      ventana1 -> draw(fuente1.cadena_texto);
+      ventana1 -> draw(welcome.cadena_texto);
 
       ventana1 -> draw(bg.sprite[bg.x_1]);
       bg.movercup();
-
     }
 
     if(inicio_mapa){
 
       ventana1 -> draw(background_2);
-      ventana1 -> draw(fuente2.cadena_texto);
-      ventana1 -> draw(fuente3.cadena_texto);
-
+      ventana1 -> draw(p1.vidas_texto.cadena_texto);
+      ventana1 -> draw(p1.vidasc_num.cadena_texto);
 
       ventana1 -> draw(p1.sprite[p1.x_1]);
       p1.movercup();
       p1.saltar();
       p1.agacharse();
-
 
       ventana1 -> draw(p2.sprite[p2.x_1]);
 
@@ -58,9 +51,6 @@ void juego::gameloop(  ) {
       p2.movercup();
       p2.saltar();
       p2.agacharse();
-
-
-
 
       ventana1 -> draw(e1.sprite[e1.x_1]);
       e1.moverenemy();
@@ -81,11 +71,9 @@ for(int i=0;i<10;i++){
   if( (e1.bala1[i].get_xbala() < p1.get_xpersonaje() and e1.bala1[i].get_xbala()+60 >
       p1.get_xpersonaje() ) and (e1.bala1[i].get_ybala()==p1.get_ypersonaje())  ){
     std::cout << n_vidas++ << "  colicion-!!!!!!!!!!!!" << '\n';
+    p1.vidasc_num.modificar_texto(1);
   }
 }
-
-
-
 
 }
 
@@ -93,7 +81,6 @@ for(int i=0;i<10;i++){
 
 void juego::pintararray(){
 
-  fuente3.modificar_texto();
 
 
     ventana1 -> draw(p2.bala1[0]);
@@ -117,7 +104,5 @@ void juego::pintararray(){
     ventana1 -> draw(e1.bala1[7]);
     ventana1 -> draw(e1.bala1[8]);
     ventana1 -> draw(e1.bala1[9]);
-
-
 
 }
