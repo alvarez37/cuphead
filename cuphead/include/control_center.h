@@ -15,9 +15,12 @@ class juego{
 
         juego(int x, int y, std::string titulo);
         void gameloop();
+        void pintararray();
+        void kaboom_yiyi();
 
     private:
 
+    int n_vidas=0;
     bool inicio_menu=true;
     bool inicio_mapa=false;
 
@@ -38,7 +41,7 @@ class juego{
 
     texto fuente1;
     texto fuente2 = texto (5,5,40,"vidas  : 3 ");
-
+    texto fuente3 = texto (800,5,40,"10000 ");
 
     Event event;
 

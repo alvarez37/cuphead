@@ -16,11 +16,12 @@ cadena_texto.setPosition(450, 0);
 }
 
 texto::texto(int x,int y ,int tam, string a){
+  b=a;
 
 
 fuente.loadFromFile("fuente_para_score/fuente.ttf");
 
-cadena_texto.setString(a);
+cadena_texto.setString(b);
 cadena_texto.setFont(fuente);
 cadena_texto.setCharacterSize(tam);
 cadena_texto.setPosition(x,y);
@@ -29,7 +30,10 @@ cadena_texto.setColor(sf::Color(175, 108, 3));
 
 }
 
-
+void texto::modificar_texto(){
+  b="asds";
+  std::cout << "cambie" << '\n';
+}
 
 
 

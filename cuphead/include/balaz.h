@@ -1,3 +1,6 @@
+#ifndef BALAZ_H
+#define BALAZ_H
+
 #include <iostream>
 using namespace std;
 #include <SFML/Graphics.hpp>
@@ -6,16 +9,47 @@ using namespace std;
 using namespace sf;
 #include "string"
 
-class bala: public sf::Sprite {
+class bala : public sf::Sprite{
+
+      public:
+        bala();
+        void moverbala();
+
+      protected:
+
+        int x=0,y=0;
+        float tam_bala= 0.21;
+        Texture * bala_1;
+
+};
+
+
+class bala_cuphead : public bala {
 
     public:
-      bala();
+      bala_cuphead ();
+      void direcion(int,int);
+      void moverbala();
 
     private:
 
+};
 
-      int x=-100,y=-100;
-      float tam_bala= 0.21;
-      Texture * bala_1;
+
+
+
+class bala_enemigo : public bala {
+
+    public:
+      bala_enemigo ();
+      void direcion(int);
+      void moverbala();
+      int get_xbala();
+      int get_ybala();
+
+    private:
 
 };
+
+
+#endif // BALAZ_H

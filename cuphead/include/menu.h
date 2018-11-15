@@ -10,18 +10,17 @@ class texto{
 
 public:
     texto();
+    void modificar_texto();
     texto(int ,int,int,string);
 
     Font fuente;
     Text cadena_texto;
     string entrada= "welcome to my game ->";
-
+    string b;
 
 };
 
-
-
-
+// *****************************************************************************
 
 class background : public sf::Sprite {
 
@@ -41,8 +40,8 @@ class background : public sf::Sprite {
 
 };
 
-
 // *****************************************************************************
+
 class background2 : public sf::Sprite {
 
     public:

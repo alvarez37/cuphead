@@ -21,15 +21,18 @@ class personaje {
     void agacharse();
     void movercup();
     void disparar();
+    int get_xpersonaje();
+    int get_ypersonaje();
 
-    bala bala1[10];
+
+    bala_cuphead bala1[10];
     int num_bala=0;
     int cont_bala=0;
 
-    int bala_x=-100,bala_y=-100;
 
     int npersonaje;
     int cantidad_imagenes=61;
+
 
     int joyx,joyy;
     int x_1=0;
@@ -39,6 +42,7 @@ class personaje {
     int agacharse_n=0;
 
   private:
+
     //cargar archivos
     int n=49,n2=48;
     char imagen_n=n;

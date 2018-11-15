@@ -210,3 +210,59 @@
 1541777848 source:/home/jean/Documents/juego/cuphead/cuphead/src/balaz.cpp
 	"balaz.h"
 
+1542141720 source:/home/jean/Documents/cuphead/cuphead/main.cpp
+	<SFML/Graphics.hpp>
+	<iostream>
+	"control_center.h"
+
+1542214868 /home/jean/Documents/cuphead/cuphead/include/control_center.h
+	<iostream>
+	<SFML/Graphics.hpp>
+	"menu.h"
+	"personaje.h"
+	"enemy_1.h"
+
+1542215285 /home/jean/Documents/cuphead/cuphead/include/menu.h
+	<iostream>
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+	"string"
+
+1542211334 /home/jean/Documents/cuphead/cuphead/include/personaje.h
+	<iostream>
+	<SFML/Graphics.hpp>
+	"string"
+	"balaz.h"
+
+1542211544 /home/jean/Documents/cuphead/cuphead/include/balaz.h
+	<iostream>
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+	"string"
+
+1542209777 /home/jean/Documents/cuphead/cuphead/include/enemy_1.h
+	<iostream>
+	<SFML/Graphics.hpp>
+	"string"
+	"balaz.h"
+
+1542211544 source:/home/jean/Documents/cuphead/cuphead/src/balaz.cpp
+	"balaz.h"
+
+1542215448 source:/home/jean/Documents/cuphead/cuphead/src/control_center.cpp
+	"control_center.h"
+
+1542214468 source:/home/jean/Documents/cuphead/cuphead/src/enemy_1.cpp
+	"enemy_1.h"
+
+1542215373 source:/home/jean/Documents/cuphead/cuphead/src/menu.cpp
+	"menu.h"
+
+1542214572 source:/home/jean/Documents/cuphead/cuphead/src/personaje.cpp
+	"personaje.h"
+
+1542205548 source:/home/jean/Documents/cuphead/cuphead/src/balan.cpp
+	"balan.h"
+
+1542205548 /home/jean/Documents/cuphead/cuphead/include/balan.h
+

@@ -57,7 +57,7 @@ personaje::personaje(int a){
 // *****************************************************************************
 // *****************************************************************************
 void personaje::runright(){
-    (x<990) ? x += 30 : x=990;
+    (x<990) ? x += 20 : x=990;
 
     if(x_1<7){
       x_1=7;
@@ -71,7 +71,7 @@ void personaje::runright(){
 
 // *****************************************************************************
 void personaje::runleft(){
-     (x>0 ) ? x -= 30 : x=0;
+     (x>0 ) ? x -= 20 : x=0;
      if(x_1<47){
        x_1=47;
      }
@@ -152,8 +152,9 @@ void personaje::stop(){
 }
 // **********************0*******************************************************
 void personaje::disparar(){
+  bala1[num_bala].direcion(x,y);
   cont_bala++;
-  std::cout << cont_bala << '\n';
+  std::cout << num_bala << '\n';
 
   if(x_1<39){
     x_1=39;
@@ -163,19 +164,36 @@ void personaje::disparar(){
   }
   x_1++;
 
-  bala_x=x;
-  bala_y=y;
+  num_bala++;
 
-
-
-  bala1[0].setPosition(Vector2f(bala_x ,bala_y));
-  if(num_bala>=2){
+  if(num_bala==9){
     num_bala=0;
   }
 
+
+}
+
+int personaje::get_ypersonaje(){
+  return y;
+}
+// *****************************************************************************
+int personaje::get_xpersonaje(){
+  return x;
 }
 // *****************************************************************************
 void personaje::movercup(){
+
+
+  bala1[0].moverbala();
+  bala1[1].moverbala();
+  bala1[2].moverbala();
+  bala1[3].moverbala();
+  bala1[4].moverbala();
+  bala1[5].moverbala();
+  bala1[6].moverbala();
+  bala1[7].moverbala();
+  bala1[8].moverbala();
+  bala1[9].moverbala();
 
   for (int i = 0; i < cantidad_imagenes ; i++)
     sprite[i].setPosition(Vector2f(x ,y));
@@ -183,17 +201,10 @@ void personaje::movercup(){
     if ( sf::Joystick::isButtonPressed(npersonaje,5) || sf::Keyboard::isKeyPressed(sf::Keyboard::X)){
       disparar();
     }
-    else{
-      bala_x+=90;
-      bala1[0].setPosition(Vector2f(bala_x ,bala_y));
-      if(bala_x>690){
-        bala_x=5000;
-      }
-    }
+
 
     stop();
 
-    std::cout << npersonaje << '\n';
 
     joyx = sf::Joystick::getAxisPosition(npersonaje, sf::Joystick::X);
 

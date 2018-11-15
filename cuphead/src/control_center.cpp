@@ -42,21 +42,19 @@ void juego::gameloop(  ) {
 
       ventana1 -> draw(background_2);
       ventana1 -> draw(fuente2.cadena_texto);
+      ventana1 -> draw(fuente3.cadena_texto);
 
-      // 
-      //
-      // ventana1 -> draw(p1.sprite[p1.x_1]);
-      // ventana1 -> draw(p1.bala1);
-      // p1.movercup();
-      // p1.saltar();
-      // p1.agacharse();
+
+      ventana1 -> draw(p1.sprite[p1.x_1]);
+      p1.movercup();
+      p1.saltar();
+      p1.agacharse();
 
 
       ventana1 -> draw(p2.sprite[p2.x_1]);
 
-      for (int i = 0; i < 10; i++) {
-        ventana1 -> draw(p2.bala1[i]);
-      }
+      pintararray();
+
       p2.movercup();
       p2.saltar();
       p2.agacharse();
@@ -67,11 +65,59 @@ void juego::gameloop(  ) {
       ventana1 -> draw(e1.sprite[e1.x_1]);
       e1.moverenemy();
 
-
+      kaboom_yiyi();
 
     }
 
     ventana1 ->  display();
 
   }
+}
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+void juego::kaboom_yiyi(){
+for(int i=0;i<10;i++){
+  if( (e1.bala1[i].get_xbala() < p1.get_xpersonaje() and e1.bala1[i].get_xbala()+60 >
+      p1.get_xpersonaje() ) and (e1.bala1[i].get_ybala()==p1.get_ypersonaje())  ){
+    std::cout << n_vidas++ << "  colicion-!!!!!!!!!!!!" << '\n';
+  }
+}
+
+
+
+
+}
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+void juego::pintararray(){
+
+  fuente3.modificar_texto();
+
+
+    ventana1 -> draw(p2.bala1[0]);
+    ventana1 -> draw(p2.bala1[1]);
+    ventana1 -> draw(p2.bala1[2]);
+    ventana1 -> draw(p2.bala1[3]);
+    ventana1 -> draw(p2.bala1[4]);
+    ventana1 -> draw(p2.bala1[5]);
+    ventana1 -> draw(p2.bala1[6]);
+    ventana1 -> draw(p2.bala1[7]);
+    ventana1 -> draw(p2.bala1[8]);
+    ventana1 -> draw(p2.bala1[9]);
+
+    ventana1 -> draw(e1.bala1[0]);
+    ventana1 -> draw(e1.bala1[1]);
+    ventana1 -> draw(e1.bala1[2]);
+    ventana1 -> draw(e1.bala1[3]);
+    ventana1 -> draw(e1.bala1[4]);
+    ventana1 -> draw(e1.bala1[5]);
+    ventana1 -> draw(e1.bala1[6]);
+    ventana1 -> draw(e1.bala1[7]);
+    ventana1 -> draw(e1.bala1[8]);
+    ventana1 -> draw(e1.bala1[9]);
+
+
+
 }
