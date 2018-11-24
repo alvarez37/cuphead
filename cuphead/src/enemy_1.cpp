@@ -34,18 +34,29 @@ enemy::enemy(){
 
   void enemy::disparar(){
 
-    bala1[num_bala].direcion((rand()%10)*10);
+    bala1[num_bala].direcion((rand()%50)*10);
     num_bala++;
     std::cout << "num_bala   "<< num_bala << '\n';
-
+    dispararn=20;
 
 
   }
 // // *****************************************************************************
 
+void enemy::disparar_mov(){
 
 
 
+}
+
+//*****************************************************************************
+int enemy::get_vida_enemigo(){
+  return vida_enemigo;
+}
+//*****************************************************************************
+void enemy::set_vida_enemigo(int n){
+ vida_enemigo-=n;
+}
 // *****************************************************************************
 
 void enemy::moverenemy(){
@@ -71,5 +82,6 @@ void enemy::moverenemy(){
   if ( (rand()%40)==3 and num_bala!=10 ){
     disparar();
   }
+  disparar_mov();
 
 }

@@ -4,6 +4,7 @@ using namespace std;
 using namespace sf;
 #include "string"
  #include "balaz.h"
+ #include "menu.h"
 
 class enemy {
 
@@ -15,7 +16,10 @@ class enemy {
 
     void saltar();
     void moverenemy();
+    void disparar_mov();
     void disparar();
+    int get_vida_enemigo();
+    void set_vida_enemigo(int);
 
     int cantidad_imagenes=98;
     int x_1=0;
@@ -25,7 +29,10 @@ class enemy {
     bala_enemigo bala1[10];
     int num_bala=0;
     int saltar_n=0;
+    int dispararn=0;
+    int vida_enemigo=100;
 
+    texto   vidase_num = texto (1000,5,40,100);
 
     //cargar archivos
     int n=49,n2=48;

@@ -26,10 +26,14 @@ void bala_cuphead::moverbala( ) {
       this ->setPosition(Vector2f(x , y ));
       x+=90;
     }
-    if (x==1800) {
+    if (x==990) {
       x=0;
     }
 }
+
+int bala_cuphead::bala_get_x() {return x; }
+int bala_cuphead::bala_get_y() {return y; }
+
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++
 //++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -53,6 +57,6 @@ void bala_enemigo::moverbala() {
       y+=10;
     }
     if (y==1800) {
-      y=0;
+      y=-1;
     }
 }

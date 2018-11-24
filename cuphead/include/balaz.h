@@ -18,7 +18,7 @@ class bala : public sf::Sprite{
       protected:
 
         int x=-100,y=0;
-        float tam_bala= 0.21;
+        float tam_bala= 0.41;
         Texture * bala_1;
 
 };
@@ -29,7 +29,8 @@ class bala_cuphead : public bala {
       bala_cuphead ();
       void direcion(int,int);
       void moverbala();
-
+      int bala_get_x();
+      int bala_get_y();
     private:
 
 };

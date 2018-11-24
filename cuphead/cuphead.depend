@@ -215,52 +215,53 @@
 	<iostream>
 	"control_center.h"
 
-1542303201 /home/jean/Documents/cuphead/cuphead/include/control_center.h
+1543079204 /home/jean/Documents/cuphead/cuphead/include/control_center.h
 	<iostream>
 	<SFML/Graphics.hpp>
 	"menu.h"
 	"personaje.h"
 	"enemy_1.h"
 
-1542303083 /home/jean/Documents/cuphead/cuphead/include/menu.h
+1543079276 /home/jean/Documents/cuphead/cuphead/include/menu.h
 	<iostream>
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
 	"string"
 	"sstream"
 
-1542302097 /home/jean/Documents/cuphead/cuphead/include/personaje.h
+1543077279 /home/jean/Documents/cuphead/cuphead/include/personaje.h
 	<iostream>
 	<SFML/Graphics.hpp>
 	"string"
 	"balaz.h"
 	"menu.h"
 
-1542303083 /home/jean/Documents/cuphead/cuphead/include/balaz.h
+1542814268 /home/jean/Documents/cuphead/cuphead/include/balaz.h
 	<iostream>
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
 	"string"
 
-1542303083 /home/jean/Documents/cuphead/cuphead/include/enemy_1.h
+1543079103 /home/jean/Documents/cuphead/cuphead/include/enemy_1.h
 	<iostream>
 	<SFML/Graphics.hpp>
 	"string"
 	"balaz.h"
-
-1542303083 source:/home/jean/Documents/cuphead/cuphead/src/balaz.cpp
-	"balaz.h"
-
-1542301744 source:/home/jean/Documents/cuphead/cuphead/src/control_center.cpp
-	"control_center.h"
-
-1542214468 source:/home/jean/Documents/cuphead/cuphead/src/enemy_1.cpp
-	"enemy_1.h"
-
-1542302569 source:/home/jean/Documents/cuphead/cuphead/src/menu.cpp
 	"menu.h"
 
-1542301851 source:/home/jean/Documents/cuphead/cuphead/src/personaje.cpp
+1542814268 source:/home/jean/Documents/cuphead/cuphead/src/balaz.cpp
+	"balaz.h"
+
+1543079103 source:/home/jean/Documents/cuphead/cuphead/src/control_center.cpp
+	"control_center.h"
+
+1543079103 source:/home/jean/Documents/cuphead/cuphead/src/enemy_1.cpp
+	"enemy_1.h"
+
+1543079204 source:/home/jean/Documents/cuphead/cuphead/src/menu.cpp
+	"menu.h"
+
+1543077279 source:/home/jean/Documents/cuphead/cuphead/src/personaje.cpp
 	"personaje.h"
 
 1542205548 source:/home/jean/Documents/cuphead/cuphead/src/balan.cpp

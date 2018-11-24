@@ -20,12 +20,10 @@ class juego{
 
     private:
     int n_vidas=0;
-    // bool inicio_menu=true;
-    // bool inicio_mapa=false;
-
-// temporal
-    bool inicio_menu=false;
-    bool inicio_mapa=true;
+    bool inicio_menu=true;
+    bool inicio_mapa=false;
+    bool perdistebg=false;
+    bool bgganaste=false;
 
 
     RenderWindow * ventana1;
@@ -33,6 +31,9 @@ class juego{
     //menu del juego
     background  background_1;
     background2  background_2;
+    bgperdiste  bg1;
+    bgganaste_  bg2;
+    bomba bomba1;
 
     personaje bg;
 
@@ -42,7 +43,6 @@ class juego{
     personaje p2= personaje(1);
 
     texto welcome;
-    texto vidase_num = texto (800,5,40,"10000 ");
 
     Event event;
 

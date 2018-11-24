@@ -126,7 +126,7 @@ void personaje::agacharse(){
         if(x_1>29 ){
           x_1=24;
         }
-        }
+      }
     if(agacharse_n-->3 && agacharse_n <5 )
       for (int i = 0; i < 100; i++,y++);
 
@@ -152,16 +152,18 @@ void personaje::stop(){
 }
 // **********************0*******************************************************
 void personaje::disparar(){
-  bala1[num_bala].direcion(x,y);
+  bala1[num_bala].direcion(x+60,y+40);
   cont_bala++;
   std::cout << num_bala << '\n';
 
-  if(x_1<39){
+  if(x_1<39 ){
     x_1=39;
   }
-  if(x_1>43){
+
+  if(x_1 > 43){
     x_1=39;
   }
+
   x_1++;
 
   num_bala++;
@@ -173,22 +175,24 @@ void personaje::disparar(){
 }
 // *****************************************************************************
 
-int personaje::get_ypersonaje(){
-  return y;
-}
-// *****************************************************************************
-int personaje::get_xpersonaje(){
-  return x;
-}
-
+int personaje::get_ypersonaje(){ return y; }
 
 // *****************************************************************************
-int personaje::get_VidaPersonaje(){
-  return vidas;
-}
+int personaje::get_xpersonaje(){ return x; }
+
+// *****************************************************************************
+int personaje::get_VidaPersonaje(){ return vidas; }
+
+// *****************************************************************************
+void personaje::set_VidaPersonaje(){  vidas--; }
+// *****************************************************************************
+void personaje::set_VidaPersonaje2(int n){  vidas=n; }
+
 // *****************************************************************************
 void personaje::movercup(){
 
+
+//  std::cout << "[ " << "x: "<< x  << " y: " << y << " ]" << '\n';
 
   bala1[0].moverbala();
   bala1[1].moverbala();

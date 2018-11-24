@@ -25,14 +25,16 @@ class personaje {
     int get_xpersonaje();
     int get_ypersonaje();
     int get_VidaPersonaje();
+    void set_VidaPersonaje();
+    void set_VidaPersonaje2(int);
+
 
     int x_1=0;
 
     bala_cuphead bala1[10];
 
     texto vidas_texto = texto (5,5,40,"vidas  :  ");
-    texto   vidasc_num = texto (150,5,40,3)
-;
+    texto   vidasc_num = texto (150,5,40,3);
 
   private:
 
