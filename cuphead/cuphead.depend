@@ -215,14 +215,14 @@
 	<iostream>
 	"control_center.h"
 
-1543079204 /home/jean/Documents/cuphead/cuphead/include/control_center.h
+1543283747 /home/jean/Documents/cuphead/cuphead/include/control_center.h
 	<iostream>
 	<SFML/Graphics.hpp>
 	"menu.h"
 	"personaje.h"
 	"enemy_1.h"
 
-1543079276 /home/jean/Documents/cuphead/cuphead/include/menu.h
+1543261765 /home/jean/Documents/cuphead/cuphead/include/menu.h
 	<iostream>
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
@@ -258,7 +258,7 @@
 1543079103 source:/home/jean/Documents/cuphead/cuphead/src/enemy_1.cpp
 	"enemy_1.h"
 
-1543079204 source:/home/jean/Documents/cuphead/cuphead/src/menu.cpp
+1543261764 source:/home/jean/Documents/cuphead/cuphead/src/menu.cpp
 	"menu.h"
 
 1543077279 source:/home/jean/Documents/cuphead/cuphead/src/personaje.cpp

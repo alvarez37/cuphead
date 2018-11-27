@@ -30,12 +30,22 @@ class juego{
 
     //menu del juego
     background  background_1;
-    background2  background_2;
-    bgperdiste  bg1;
-    bgganaste_  bg2;
-    bomba bomba1;
+
 
     personaje bg;
+
+
+
+    background2  background_2=background2(0,0,1.30,"imagenes/menu/bg2.png");
+    background2  bg1=background2(0,0,0.70,"imagenes/menu/bgperdiste.jpg");
+    background2  bg2=background2(0,0, 0.85,"imagenes/menu/ganaste.png");
+    background2  bomba1=background2(380,360,0.10,"imagenes/menu/bomba.png");
+
+
+
+
+
+
 
     //play game
     enemy e1;

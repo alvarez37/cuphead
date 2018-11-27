@@ -45,7 +45,6 @@ class background : public sf::Sprite {
       SoundBuffer buffer;
       Sound sonido;
 
-
 };
 
 // *****************************************************************************
@@ -54,58 +53,16 @@ class background2 : public sf::Sprite {
 
     public:
 
-      background2();
-
-    private:
-      int x=0,y=0;
-      float tam_background= 1.30;
-      Texture * background_1;
-
-};
-
-class bgperdiste : public sf::Sprite {
-
-    public:
-
-      bgperdiste();
-
-    private:
-      int x=0,y=0;
-      float tam_background= 0.70;
-      Texture * background_1;
-
-};
-
-
-// *****************************************************************************
-
-class bomba : public sf::Sprite {
-
-    public:
-
-      bomba();
+      background2(int,int,float,string );
       void mover();
 
     private:
-      int x=380,y=360;
-      float tam_background= 0.10;
-      Texture * background_1;
+      int x,y;
       int joyx;
-
-      SoundBuffer buffer;
-
-
-};
-class bgganaste_ : public sf::Sprite {
-
-    public:
-
-      bgganaste_();
-
-    private:
-      int x=0,y=0;
-      float tam_background= 1.20;
       Texture * background_1;
 
 };
+
+// *****************************************************************************
+
 #endif

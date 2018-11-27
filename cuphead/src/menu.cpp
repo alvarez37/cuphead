@@ -29,7 +29,6 @@ texto::texto(int x,int y ,int tam, int num){
       cadena_texto.setColor(sf::Color(175, 108, 3));
 }
 
-
 void texto::modificar_texto(int x){
   contenerINT-=x;
   titulo = static_cast<std::ostringstream*>(&(std::ostringstream() << contenerINT))->str();
@@ -43,6 +42,7 @@ void texto::set_texto(int x){
   cadena_texto.setString(titulo);
 
 }
+
 background::background()  : sf::Sprite(){
 
       buffer.loadFromFile("sound/MUS_VictoryScreen.wav");
@@ -60,52 +60,21 @@ background::background()  : sf::Sprite(){
 }
 
 // *****************************************************************************
-background2::background2()  : sf::Sprite(){
-
+background2::background2(int x_,int y_, float tam,string direccion)  : sf::Sprite(){
+      x=x_,y=y_;
       background_1 = new Texture;
-      background_1 -> loadFromFile("imagenes/menu/bg2.png");
+      background_1 -> loadFromFile(direccion);
 
-      this ->setPosition(Vector2f(x ,y ));
+      this ->setPosition(Vector2f(x_ ,y_ ));
       this ->setTexture(*background_1);
-      this ->setScale(sf::Vector2f(tam_background, tam_background));
+      this ->setScale(sf::Vector2f(tam, tam));
 
 }
+
 // *****************************************************************************
-bgperdiste::bgperdiste()  : sf::Sprite(){
 
-      background_1 = new Texture;
-      background_1 -> loadFromFile("imagenes/menu/bgperdiste.jpg");
-
-      this ->setPosition(Vector2f(x ,y ));
-      this ->setTexture(*background_1);
-      this ->setScale(sf::Vector2f(tam_background, tam_background));
-
-}
-
-bgganaste_::bgganaste_()  : sf::Sprite(){
-
-      background_1 = new Texture;
-      background_1 -> loadFromFile("imagenes/menu/ganaste.jpg");
-
-      this ->setPosition(Vector2f(x ,y ));
-      this ->setTexture(*background_1);
-      this ->setScale(sf::Vector2f(tam_background, tam_background));
-
-}
-// *****************************************************************************
-bomba::bomba()  : sf::Sprite(){
-
-      background_1 = new Texture;
-      background_1 -> loadFromFile("imagenes/menu/bomba.png");
-
-      this ->setPosition(Vector2f(x ,y ));
-      this ->setTexture(*background_1);
-      this ->setScale(sf::Vector2f(tam_background, tam_background));
-
-}
-
-void bomba::mover () {
-      this ->setPosition(Vector2f(x ,y ));
+void background2::mover () {
+  this ->setPosition(Vector2f(x ,y ));
 
   joyx = sf::Joystick::getAxisPosition(0, sf::Joystick::X);
 
@@ -115,6 +84,5 @@ void bomba::mover () {
 
   if (joyx <  0 || sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
       (x<380)? x=630 : x-=280;
-
     }
 }
